@@ -8,7 +8,7 @@ public interface TodoService {
 
     String getTodoOnlyTitleList();
 
-    String getTodoList();
+    TodoResDto getTodoList(int index);
 
     String updateTodo(TodoReqDto todoDto);
 

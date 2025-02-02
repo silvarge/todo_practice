@@ -45,7 +45,10 @@ public class TodoServiceImpl implements TodoService {
     }
 
     @Override
-    public String getTodoList() {
+    public TodoResDto getTodoList(int index) {
+
+        Todo todo = todoRepository.
+
         return "";
     }
 
