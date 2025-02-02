@@ -1,18 +1,22 @@
 package org.example.todo_practice.service;
 
+import org.example.todo_practice.dto.TodoIdDto;
+import org.example.todo_practice.dto.TodoListResDto;
 import org.example.todo_practice.dto.TodoReqDto;
 import org.example.todo_practice.dto.TodoResDto;
+
+import java.util.List;
 
 public interface TodoService {
     TodoResDto registerTodoContent(TodoReqDto todoDto);
 
-    String getTodoOnlyTitleList();
+    List<TodoListResDto> getAllTitleList();
 
-    TodoResDto getTodoList(int index);
+    TodoResDto getTodoList(int id);
 
-    String updateTodo(TodoReqDto todoDto);
+    TodoIdDto updateTodo(TodoReqDto todoDto, int id);
 
-    String updateIsDone();
+    TodoIdDto updateIsDone(int id);
 
-    String deleteTodo();
+    TodoIdDto deleteTodo(int id);
 }
